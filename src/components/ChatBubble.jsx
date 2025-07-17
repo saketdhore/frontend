@@ -1,6 +1,7 @@
 import React from 'react';
+import ScoreProgress from './ScoreProgress';
 
-const ChatBubble = ({ message, isUser }) => {
+const ChatBubble = ({ message, isUser, score }) => {
   if (!message) return null;
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
@@ -16,6 +17,13 @@ const ChatBubble = ({ message, isUser }) => {
         {isUser || typeof message === 'string'
           ? message
           : (React.isValidElement(message) ? message : null)}
+        
+        {/* Progress bar for user messages with scores */}
+        {isUser && score && (
+          <div className="mt-3 pt-3 border-t border-gray-200">
+            <ScoreProgress score={score} />
+          </div>
+        )}
       </div>
     </div>
   );

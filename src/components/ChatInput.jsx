@@ -25,12 +25,12 @@ const ChatInput = ({ onSend, loading }) => {
         value={input}
         onChange={e => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Type your message..."
+        placeholder="Type your prompt..."
         disabled={loading}
         style={{ transition: 'background 0.2s' }}
       />
       <button
-        className="bg-gray-900 hover:bg-gray-800 text-white px-5 py-2 rounded-lg font-bold disabled:opacity-50 transition-colors"
+        className="bg-black hover:bg-gray-500 text-white px-5 py-2 rounded-lg font-bold disabled:opacity-50 transition-colors"
         onClick={handleSend}
         disabled={loading || !input.trim()}
         type="button"

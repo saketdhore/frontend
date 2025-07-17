@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@custom-variant dark (&:is(.dark *));
+
 
 @tailwind utilities;
 .font-cherry-cream-soda-regular {

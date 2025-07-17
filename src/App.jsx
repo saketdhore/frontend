@@ -1,10 +1,16 @@
 import ChatContainer from './components/ChatContainer'
-
+import Navbar from './components/Navbar'
+import PromptSanbox from './components/PromptSanbox'
+import SuggestionBox from './components/SuggestionBox'
 function App() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <ChatContainer />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex min-h-screen bg-gray-50">
+        <PromptSanbox />
+        <SuggestionBox />
+      </main>
+    </>
   )
 }
 
